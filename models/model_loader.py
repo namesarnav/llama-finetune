@@ -25,5 +25,10 @@ def load_tokenizer(model_id: str, hf_token: str):
         tokenizer = LlamaTokenizer.from_pretrained(model_id, token=hf_token)
     except Exception:
         tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token)
-    tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+    #tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token # I am pretty sure you can use ['PAD'] as well, because these tokens should be masked out by the attention mask
+        tokenizer.padding_side = "left"
+        tokenizer.pad_token_id = tokenizer.eos_token_id
     return tokenizer

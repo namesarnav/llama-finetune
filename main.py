@@ -11,8 +11,12 @@ def main():
     print("Loading model + tokenizer...")
     model = load_model(MODEL_ID, HF_TOKEN)
     tokenizer = load_tokenizer(MODEL_ID, HF_TOKEN)
-
+    if getattr(model.config, "vocab_size", None) and len(tokenizer) != model.config.vocab_size:
+        model.resize_token_embeddings(len(tokenizer))
+    model.config.pad_token_id = tokenizer.pad_token_id # you need this because the error is not with the tokenizer, but with the model itself
+    
     print("Preprocessing dataset...")
+
     tk_data_train, tk_data_test, _ = preprocess_data(tokenizer, TRAIN_FILE, TEST_FILE)
 
     # resize embeddings

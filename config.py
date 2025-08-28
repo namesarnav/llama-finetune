@@ -1,6 +1,6 @@
 import os
 
-MODEL_ID = "meta-llama/llama-3.2-1B-Instruct"
+MODEL_ID = "meta-llama/llama-3.2-1B"
 
 # Update this with your HF Token
 HF_TOKEN = os.environ.get("HF_TOKEN", "YOUR_HF_TOKEN_HERE")
