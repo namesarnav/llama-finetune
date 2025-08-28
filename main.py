@@ -33,7 +33,7 @@ def main():
         gradient_accumulation_steps=2,
         learning_rate=2e-5,
         weight_decay=0.01,
-        evaluation_strategy="steps",
+        eval_strategy="steps",
         eval_steps=250,
         load_best_model_at_end=True,
         dataloader_pin_memory=True,
