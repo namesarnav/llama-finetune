@@ -1,0 +1,8 @@
+torch
+bitsandbytes
+datasets
+huggingface_hub
+transformers
+peft
+accelerate
+scikit-learn
