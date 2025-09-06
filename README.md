@@ -1,6 +1,7 @@
 # How to run
 
 - First install the dependencies using `pip install -r requirements.txt` command, you may to create a virtual env first
+- Export your HuggingFace Token to Environment Variables using `export HF_TOKEN='your token goes here'`
 - Setup your environment variables in a `.env` file or set as constants in `config.py` file
 - Run the `main.py` file using `python3 main.py`
 
