@@ -18,6 +18,7 @@ from transformers import (
     EarlyStoppingCallback
 )
 
+
 def main():
     print("Loading model + tokenizer...")
     
@@ -51,8 +52,10 @@ def main():
         per_device_train_batch_size=64,
         per_device_eval_batch_size=32,
         gradient_accumulation_steps=2,
-        learning_rate=0.08,
-        weight_decay=0.01,
+        learning_rate=3e-5,
+        warmup_ratio=0.05,
+        lr_scheduler_type="cosine",
+        weight_decay=0.001,
         eval_strategy="steps",
         eval_steps=256,
         load_best_model_at_end=True,
