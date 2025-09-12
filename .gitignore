@@ -1,1 +1,8 @@
 .env
+outputs
+venv
+results
+__pycache__
+.git
+final_model
+.python-version

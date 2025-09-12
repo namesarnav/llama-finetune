@@ -1,0 +1,290 @@
+  0%|                                                                                                                                       | 0/18660 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+  1%|█▋                                                                                                                         | 256/18660 [02:14<2:37:58,  1.94it/s]
+{'loss': 5.0852, 'grad_norm': 0.0, 'learning_rate': 0.007996141479099678, 'epoch': 0.01}
+{'loss': 5.3662, 'grad_norm': 0.0, 'learning_rate': 0.007991854233654876, 'epoch': 0.02}
+{'loss': 4.7887, 'grad_norm': 0.0, 'learning_rate': 0.007987566988210074, 'epoch': 0.03}
+{'loss': 5.3141, 'grad_norm': 0.0, 'learning_rate': 0.007983279742765274, 'epoch': 0.04}
+{'loss': 5.2043, 'grad_norm': 0.0, 'learning_rate': 0.007978992497320472, 'epoch': 0.05}
+{'loss': 5.2933, 'grad_norm': 0.0, 'learning_rate': 0.00797470525187567, 'epoch': 0.06}
+{'loss': 5.1803, 'grad_norm': 0.0, 'learning_rate': 0.007970418006430868, 'epoch': 0.08}
+{'loss': 4.9505, 'grad_norm': 0.0, 'learning_rate': 0.007966130760986068, 'epoch': 0.09}
+{'loss': 4.9788, 'grad_norm': 0.0, 'learning_rate': 0.007961843515541266, 'epoch': 0.1}
+{'loss': 4.8746, 'grad_norm': 0.0, 'learning_rate': 0.007957556270096464, 'epoch': 0.11}
+{'loss': 5.1495, 'grad_norm': 0.0, 'learning_rate': 0.007953269024651662, 'epoch': 0.12}
+{'loss': 5.1796, 'grad_norm': 0.0, 'learning_rate': 0.00794898177920686, 'epoch': 0.13}
+{'loss': 5.0389, 'grad_norm': 0.0, 'learning_rate': 0.007944694533762058, 'epoch': 0.14}
+{'loss': 5.1642, 'grad_norm': 0.0, 'learning_rate': 0.007940407288317256, 'epoch': 0.15}
+{'loss': 4.7986, 'grad_norm': 0.0, 'learning_rate': 0.007936120042872455, 'epoch': 0.16}
+{'loss': 5.2378, 'grad_norm': 0.0, 'learning_rate': 0.007931832797427653, 'epoch': 0.17}
+{'loss': 4.9571, 'grad_norm': 0.0, 'learning_rate': 0.007927545551982851, 'epoch': 0.18}
+{'loss': 5.2149, 'grad_norm': 0.0, 'learning_rate': 0.00792325830653805, 'epoch': 0.19}
+{'loss': 4.8633, 'grad_norm': 0.0, 'learning_rate': 0.007918971061093247, 'epoch': 0.2}
+{'loss': 4.9563, 'grad_norm': 0.0, 'learning_rate': 0.007914683815648447, 'epoch': 0.21}
+{'loss': 5.0895, 'grad_norm': 0.0, 'learning_rate': 0.007910396570203645, 'epoch': 0.23}
+{'loss': 5.3393, 'grad_norm': 0.0, 'learning_rate': 0.007906109324758843, 'epoch': 0.24}
+{'loss': 5.1305, 'grad_norm': 0.0, 'learning_rate': 0.00790182207931404, 'epoch': 0.25}
+{'loss': 5.2011, 'grad_norm': 0.0, 'learning_rate': 0.007897534833869239, 'epoch': 0.26}
+{'loss': 5.2485, 'grad_norm': 0.0, 'learning_rate': 0.007893247588424437, 'epoch': 0.27}
+  return fn(*args, **kwargs)                                                                                                                                          
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.25      0.98      0.40      1082
+     Class 1       0.00      0.00      0.00      1040
+     Class 2       0.31      0.01      0.02      2122
+
+    accuracy                           0.25      4244
+   macro avg       0.19      0.33      0.14      4244
+weighted avg       0.22      0.25      0.11      4244
+
+{'eval_loss': 2.5535788536071777, 'eval_accuracy': 0.25494816211121585, 'eval_f1': 0.11083651542342815, 'eval_precision': 0.2222247367577165, 'eval_recall': 0.25494816211121585, 'eval_runtime': 21.8629, 'eval_samples_per_second': 194.119, 'eval_steps_per_second': 12.167, 'epoch': 0.27}
+  3%|███▎                                                                                                                       | 512/18660 [04:53<2:43:15,  1.85it/s]
+{'loss': 5.4214, 'grad_norm': 0.0, 'learning_rate': 0.007888960342979636, 'epoch': 0.28}
+{'loss': 5.1636, 'grad_norm': 0.0, 'learning_rate': 0.007884673097534834, 'epoch': 0.29}
+{'loss': 5.1339, 'grad_norm': 0.0, 'learning_rate': 0.007880385852090032, 'epoch': 0.3}
+{'loss': 5.0704, 'grad_norm': 0.0, 'learning_rate': 0.00787609860664523, 'epoch': 0.31}
+{'loss': 5.1416, 'grad_norm': 0.0, 'learning_rate': 0.007871811361200428, 'epoch': 0.32}
+{'loss': 4.7847, 'grad_norm': 0.0, 'learning_rate': 0.007867524115755626, 'epoch': 0.33}
+{'loss': 4.8507, 'grad_norm': 0.0, 'learning_rate': 0.007863236870310824, 'epoch': 0.34}
+{'loss': 4.9898, 'grad_norm': 0.0, 'learning_rate': 0.007858949624866024, 'epoch': 0.35}
+{'loss': 4.9842, 'grad_norm': 0.0, 'learning_rate': 0.007854662379421222, 'epoch': 0.36}
+{'loss': 4.7842, 'grad_norm': 0.0, 'learning_rate': 0.00785037513397642, 'epoch': 0.38}
+{'loss': 5.4021, 'grad_norm': 0.0, 'learning_rate': 0.00784608788853162, 'epoch': 0.39}
+{'loss': 5.0842, 'grad_norm': 0.0, 'learning_rate': 0.007841800643086818, 'epoch': 0.4}
+{'loss': 5.1206, 'grad_norm': 0.0, 'learning_rate': 0.007837513397642016, 'epoch': 0.41}
+{'loss': 4.8083, 'grad_norm': 0.0, 'learning_rate': 0.007833226152197214, 'epoch': 0.42}
+{'loss': 5.4018, 'grad_norm': 0.0, 'learning_rate': 0.007828938906752412, 'epoch': 0.43}
+{'loss': 4.8748, 'grad_norm': 0.0, 'learning_rate': 0.00782465166130761, 'epoch': 0.44}
+{'loss': 4.9987, 'grad_norm': 0.0, 'learning_rate': 0.007820364415862808, 'epoch': 0.45}
+{'loss': 4.9818, 'grad_norm': 0.0, 'learning_rate': 0.007816077170418007, 'epoch': 0.46}
+{'loss': 4.9223, 'grad_norm': 0.0, 'learning_rate': 0.007811789924973205, 'epoch': 0.47}
+{'loss': 5.0811, 'grad_norm': 0.0, 'learning_rate': 0.007807502679528403, 'epoch': 0.48}
+{'loss': 5.0491, 'grad_norm': 0.0, 'learning_rate': 0.007803215434083601, 'epoch': 0.49}
+{'loss': 5.309, 'grad_norm': 0.0, 'learning_rate': 0.0077989281886388, 'epoch': 0.5}
+{'loss': 5.2394, 'grad_norm': 0.0, 'learning_rate': 0.007794640943193998, 'epoch': 0.51}
+{'loss': 5.4692, 'grad_norm': 0.0, 'learning_rate': 0.007790353697749196, 'epoch': 0.53}
+{'loss': 5.0692, 'grad_norm': 0.0, 'learning_rate': 0.007786066452304395, 'epoch': 0.54}
+{'loss': 5.0316, 'grad_norm': 0.0, 'learning_rate': 0.007781779206859593, 'epoch': 0.55}
+                                                                                                                                                                      
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.25      0.98      0.40      1082
+     Class 1       0.00      0.00      0.00      1040
+     Class 2       0.31      0.01      0.02      2122
+
+    accuracy                           0.25      4244
+   macro avg       0.19      0.33      0.14      4244
+weighted avg       0.22      0.25      0.11      4244
+
+{'eval_loss': 2.5535788536071777, 'eval_accuracy': 0.25494816211121585, 'eval_f1': 0.11083651542342815, 'eval_precision': 0.2222247367577165, 'eval_recall': 0.25494816211121585, 'eval_runtime': 21.8692, 'eval_samples_per_second': 194.063, 'eval_steps_per_second': 12.163, 'epoch': 0.55}
+Cannot access gated repo for url https://huggingface.co/meta-llama/llama-3.2-1B/resolve/main/config.json.
+Access to model meta-llama/Llama-3.2-1B is restricted. You must have access to it and be authenticated to access it. Please log in. - silently ignoring the lookup for the file config.json in meta-llama/llama-3.2-1B.
+  warnings.warn(
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in meta-llama/llama-3.2-1B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+  4%|█████                                                                                                                      | 768/18660 [07:30<2:33:20,  1.94it/s]
+{'loss': 5.2028, 'grad_norm': 0.0, 'learning_rate': 0.007777491961414791, 'epoch': 0.56}
+{'loss': 5.413, 'grad_norm': 0.0, 'learning_rate': 0.007773204715969989, 'epoch': 0.57}
+{'loss': 5.2872, 'grad_norm': 0.0, 'learning_rate': 0.007768917470525188, 'epoch': 0.58}
+{'loss': 5.1377, 'grad_norm': 0.0, 'learning_rate': 0.0077646302250803855, 'epoch': 0.59}
+{'loss': 5.1098, 'grad_norm': 0.0, 'learning_rate': 0.007760342979635584, 'epoch': 0.6}
+{'loss': 5.4852, 'grad_norm': 0.0, 'learning_rate': 0.007756055734190783, 'epoch': 0.61}
+{'loss': 4.8401, 'grad_norm': 0.0, 'learning_rate': 0.007751768488745981, 'epoch': 0.62}
+{'loss': 5.1989, 'grad_norm': 0.0, 'learning_rate': 0.007747481243301179, 'epoch': 0.63}
+{'loss': 5.1963, 'grad_norm': 0.0, 'learning_rate': 0.007743193997856377, 'epoch': 0.64}
+{'loss': 5.3372, 'grad_norm': 0.0, 'learning_rate': 0.007738906752411576, 'epoch': 0.65}
+{'loss': 5.3721, 'grad_norm': 0.0, 'learning_rate': 0.007734619506966774, 'epoch': 0.66}
+{'loss': 4.9998, 'grad_norm': 0.0, 'learning_rate': 0.007730332261521972, 'epoch': 0.68}
+{'loss': 5.102, 'grad_norm': 0.0, 'learning_rate': 0.007726045016077171, 'epoch': 0.69}
+{'loss': 5.1898, 'grad_norm': 0.0, 'learning_rate': 0.007721757770632369, 'epoch': 0.7}
+{'loss': 4.9944, 'grad_norm': 0.0, 'learning_rate': 0.007717470525187567, 'epoch': 0.71}
+{'loss': 4.9356, 'grad_norm': 0.0, 'learning_rate': 0.007713183279742765, 'epoch': 0.72}
+{'loss': 5.3836, 'grad_norm': 0.0, 'learning_rate': 0.007708896034297964, 'epoch': 0.73}
+{'loss': 5.0501, 'grad_norm': 0.0, 'learning_rate': 0.0077046087888531616, 'epoch': 0.74}
+{'loss': 5.1104, 'grad_norm': 0.0, 'learning_rate': 0.00770032154340836, 'epoch': 0.75}
+{'loss': 5.0758, 'grad_norm': 0.0, 'learning_rate': 0.007696034297963559, 'epoch': 0.76}
+{'loss': 5.3857, 'grad_norm': 0.0, 'learning_rate': 0.007691747052518757, 'epoch': 0.77}
+{'loss': 5.2264, 'grad_norm': 0.0, 'learning_rate': 0.007687459807073955, 'epoch': 0.78}
+{'loss': 5.1834, 'grad_norm': 0.0, 'learning_rate': 0.007683172561629153, 'epoch': 0.79}
+{'loss': 5.2512, 'grad_norm': 0.0, 'learning_rate': 0.007678885316184352, 'epoch': 0.8}
+{'loss': 4.9126, 'grad_norm': 0.0, 'learning_rate': 0.00767459807073955, 'epoch': 0.81}
+  return fn(*args, **kwargs)                                                                                                                                          
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.25      0.98      0.40      1082
+     Class 1       0.00      0.00      0.00      1040
+     Class 2       0.31      0.01      0.02      2122
+
+    accuracy                           0.25      4244
+   macro avg       0.19      0.33      0.14      4244
+weighted avg       0.22      0.25      0.11      4244
+
+{'eval_loss': 2.5535788536071777, 'eval_accuracy': 0.25494816211121585, 'eval_f1': 0.11083651542342815, 'eval_precision': 0.2222247367577165, 'eval_recall': 0.25494816211121585, 'eval_runtime': 21.8361, 'eval_samples_per_second': 194.357, 'eval_steps_per_second': 12.182, 'epoch': 0.82}
+  5%|██████▋                                                                                                                   | 1024/18660 [10:06<2:34:47,  1.90it/s]
+{'loss': 4.8808, 'grad_norm': 0.0, 'learning_rate': 0.007670310825294748, 'epoch': 0.83}
+{'loss': 5.3121, 'grad_norm': 0.0, 'learning_rate': 0.007666023579849947, 'epoch': 0.84}
+{'loss': 5.08, 'grad_norm': 0.0, 'learning_rate': 0.007661736334405145, 'epoch': 0.85}
+{'loss': 5.2298, 'grad_norm': 0.0, 'learning_rate': 0.007657449088960343, 'epoch': 0.86}
+{'loss': 5.1001, 'grad_norm': 0.0, 'learning_rate': 0.007653161843515541, 'epoch': 0.87}
+{'loss': 5.2448, 'grad_norm': 0.0, 'learning_rate': 0.00764887459807074, 'epoch': 0.88}
+{'loss': 4.8462, 'grad_norm': 0.0, 'learning_rate': 0.0076445873526259376, 'epoch': 0.89}
+{'loss': 5.0629, 'grad_norm': 0.0, 'learning_rate': 0.007640300107181136, 'epoch': 0.9}
+{'loss': 5.3071, 'grad_norm': 0.0, 'learning_rate': 0.007636012861736335, 'epoch': 0.91}
+{'loss': 5.2147, 'grad_norm': 0.0, 'learning_rate': 0.007631725616291533, 'epoch': 0.92}
+{'loss': 5.2778, 'grad_norm': 0.0, 'learning_rate': 0.007627438370846731, 'epoch': 0.93}
+{'loss': 4.9408, 'grad_norm': 0.0, 'learning_rate': 0.007623151125401929, 'epoch': 0.94}
+{'loss': 4.8169, 'grad_norm': 0.0, 'learning_rate': 0.007618863879957128, 'epoch': 0.95}
+{'loss': 4.7386, 'grad_norm': 0.0, 'learning_rate': 0.007614576634512326, 'epoch': 0.96}
+{'loss': 5.1642, 'grad_norm': 0.0, 'learning_rate': 0.007610289389067524, 'epoch': 0.98}
+{'loss': 5.4402, 'grad_norm': 0.0, 'learning_rate': 0.007606002143622723, 'epoch': 0.99}
+{'loss': 5.2503, 'grad_norm': 0.0, 'learning_rate': 0.007601714898177921, 'epoch': 1.0}
+{'loss': 4.9935, 'grad_norm': 0.0, 'learning_rate': 0.007597427652733119, 'epoch': 1.01}
+{'loss': 4.7966, 'grad_norm': 0.0, 'learning_rate': 0.007593140407288317, 'epoch': 1.02}
+{'loss': 5.1539, 'grad_norm': 0.0, 'learning_rate': 0.007588853161843516, 'epoch': 1.03}
+{'loss': 5.108, 'grad_norm': 0.0, 'learning_rate': 0.007584565916398714, 'epoch': 1.04}
+{'loss': 5.3571, 'grad_norm': 0.0, 'learning_rate': 0.007580278670953912, 'epoch': 1.05}
+{'loss': 5.1062, 'grad_norm': 0.0, 'learning_rate': 0.007575991425509111, 'epoch': 1.06}
+{'loss': 5.2887, 'grad_norm': 0.0, 'learning_rate': 0.007571704180064309, 'epoch': 1.07}
+{'loss': 5.5543, 'grad_norm': 0.0, 'learning_rate': 0.007567416934619507, 'epoch': 1.08}
+{'loss': 5.3762, 'grad_norm': 0.0, 'learning_rate': 0.007563129689174705, 'epoch': 1.09}
+                                                                                                                                                                      
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.25      0.98      0.40      1082
+     Class 1       0.00      0.00      0.00      1040
+     Class 2       0.31      0.01      0.02      2122
+
+    accuracy                           0.25      4244
+   macro avg       0.19      0.33      0.14      4244
+weighted avg       0.22      0.25      0.11      4244
+
+{'eval_loss': 2.5535788536071777, 'eval_accuracy': 0.25494816211121585, 'eval_f1': 0.11083651542342815, 'eval_precision': 0.2222247367577165, 'eval_recall': 0.25494816211121585, 'eval_runtime': 21.8571, 'eval_samples_per_second': 194.171, 'eval_steps_per_second': 12.17, 'epoch': 1.1}
+Cannot access gated repo for url https://huggingface.co/meta-llama/llama-3.2-1B/resolve/main/config.json.
+Access to model meta-llama/Llama-3.2-1B is restricted. You must have access to it and be authenticated to access it. Please log in. - silently ignoring the lookup for the file config.json in meta-llama/llama-3.2-1B.
+  warnings.warn(
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in meta-llama/llama-3.2-1B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+  7%|████████▎                                                                                                                 | 1280/18660 [12:44<2:31:08,  1.92it/s]
+{'loss': 4.9055, 'grad_norm': 0.0, 'learning_rate': 0.007558842443729904, 'epoch': 1.1}
+{'loss': 4.9052, 'grad_norm': 0.0, 'learning_rate': 0.007554555198285102, 'epoch': 1.11}
+{'loss': 4.7431, 'grad_norm': 0.0, 'learning_rate': 0.0075502679528403, 'epoch': 1.13}
+{'loss': 4.8684, 'grad_norm': 0.0, 'learning_rate': 0.007545980707395499, 'epoch': 1.14}
+{'loss': 4.9496, 'grad_norm': 0.0, 'learning_rate': 0.007541693461950697, 'epoch': 1.15}
+{'loss': 5.1672, 'grad_norm': 0.0, 'learning_rate': 0.007537406216505895, 'epoch': 1.16}
+{'loss': 5.52, 'grad_norm': 0.0, 'learning_rate': 0.007533118971061093, 'epoch': 1.17}
+{'loss': 5.2516, 'grad_norm': 0.0, 'learning_rate': 0.007528831725616292, 'epoch': 1.18}
+{'loss': 5.3526, 'grad_norm': 0.0, 'learning_rate': 0.00752454448017149, 'epoch': 1.19}
+{'loss': 5.433, 'grad_norm': 0.0, 'learning_rate': 0.007520257234726688, 'epoch': 1.2}
+{'loss': 5.0083, 'grad_norm': 0.0, 'learning_rate': 0.007515969989281887, 'epoch': 1.21}
+{'loss': 5.0861, 'grad_norm': 0.0, 'learning_rate': 0.007511682743837085, 'epoch': 1.22}
+{'loss': 5.231, 'grad_norm': 0.0, 'learning_rate': 0.007507395498392283, 'epoch': 1.23}
+{'loss': 5.2161, 'grad_norm': 0.0, 'learning_rate': 0.007503108252947481, 'epoch': 1.24}
+{'loss': 4.9353, 'grad_norm': 0.0, 'learning_rate': 0.00749882100750268, 'epoch': 1.25}
+{'loss': 4.7357, 'grad_norm': 0.0, 'learning_rate': 0.007494533762057878, 'epoch': 1.26}
+{'loss': 5.1528, 'grad_norm': 0.0, 'learning_rate': 0.007490246516613076, 'epoch': 1.28}
+{'loss': 5.1781, 'grad_norm': 0.0, 'learning_rate': 0.007485959271168275, 'epoch': 1.29}
+{'loss': 4.9169, 'grad_norm': 0.0, 'learning_rate': 0.007481672025723473, 'epoch': 1.3}
+{'loss': 5.0732, 'grad_norm': 0.0, 'learning_rate': 0.007477384780278671, 'epoch': 1.31}
+{'loss': 5.2639, 'grad_norm': 0.0, 'learning_rate': 0.007473097534833869, 'epoch': 1.32}
+{'loss': 4.8363, 'grad_norm': 0.0, 'learning_rate': 0.007468810289389068, 'epoch': 1.33}
+{'loss': 5.1002, 'grad_norm': 0.0, 'learning_rate': 0.007464523043944266, 'epoch': 1.34}
+{'loss': 5.3411, 'grad_norm': 0.0, 'learning_rate': 0.0074602357984994636, 'epoch': 1.35}
+{'loss': 5.1488, 'grad_norm': 0.0, 'learning_rate': 0.007455948553054663, 'epoch': 1.36}
+{'loss': 5.0547, 'grad_norm': 0.0, 'learning_rate': 0.007451661307609861, 'epoch': 1.37}
+  return fn(*args, **kwargs)                                                                                                                                          
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.25      0.98      0.40      1082
+     Class 1       0.00      0.00      0.00      1040
+     Class 2       0.31      0.01      0.02      2122
+
+    accuracy                           0.25      4244
+   macro avg       0.19      0.33      0.14      4244
+weighted avg       0.22      0.25      0.11      4244
+
+{'eval_loss': 2.5535788536071777, 'eval_accuracy': 0.25494816211121585, 'eval_f1': 0.11083651542342815, 'eval_precision': 0.2222247367577165, 'eval_recall': 0.25494816211121585, 'eval_runtime': 21.8507, 'eval_samples_per_second': 194.227, 'eval_steps_per_second': 12.174, 'epoch': 1.37}
+  8%|██████████                                                                                                                | 1536/18660 [15:22<2:32:56,  1.87it/s]
+{'loss': 5.4089, 'grad_norm': 0.0, 'learning_rate': 0.007447374062165059, 'epoch': 1.38}
+{'loss': 5.1701, 'grad_norm': 0.0, 'learning_rate': 0.007443086816720257, 'epoch': 1.39}
+{'loss': 4.9014, 'grad_norm': 0.0, 'learning_rate': 0.007438799571275456, 'epoch': 1.4}
+{'loss': 5.3129, 'grad_norm': 0.0, 'learning_rate': 0.007434512325830654, 'epoch': 1.41}
+{'loss': 5.3088, 'grad_norm': 0.0, 'learning_rate': 0.007430225080385852, 'epoch': 1.43}
+{'loss': 4.6576, 'grad_norm': 0.0, 'learning_rate': 0.007425937834941051, 'epoch': 1.44}
+{'loss': 5.2697, 'grad_norm': 0.0, 'learning_rate': 0.007421650589496249, 'epoch': 1.45}
+{'loss': 5.3651, 'grad_norm': 0.0, 'learning_rate': 0.007417363344051447, 'epoch': 1.46}
+{'loss': 5.0359, 'grad_norm': 0.0, 'learning_rate': 0.007413076098606645, 'epoch': 1.47}
+{'loss': 5.1879, 'grad_norm': 0.0, 'learning_rate': 0.007408788853161844, 'epoch': 1.48}
+{'loss': 5.1518, 'grad_norm': 0.0, 'learning_rate': 0.007404501607717042, 'epoch': 1.49}
+{'loss': 5.2066, 'grad_norm': 0.0, 'learning_rate': 0.0074002143622722396, 'epoch': 1.5}
+{'loss': 5.1132, 'grad_norm': 0.0, 'learning_rate': 0.007395927116827439, 'epoch': 1.51}
+{'loss': 5.0422, 'grad_norm': 0.0, 'learning_rate': 0.007391639871382637, 'epoch': 1.52}
+{'loss': 4.9611, 'grad_norm': 0.0, 'learning_rate': 0.007387352625937835, 'epoch': 1.53}
+{'loss': 4.5367, 'grad_norm': 0.0, 'learning_rate': 0.007383065380493033, 'epoch': 1.54}
+{'loss': 4.9935, 'grad_norm': 0.0, 'learning_rate': 0.007378778135048232, 'epoch': 1.55}
+{'loss': 5.1654, 'grad_norm': 0.0, 'learning_rate': 0.00737449088960343, 'epoch': 1.56}
+{'loss': 5.0202, 'grad_norm': 0.0, 'learning_rate': 0.007370203644158628, 'epoch': 1.58}
+{'loss': 5.2596, 'grad_norm': 0.0, 'learning_rate': 0.007365916398713827, 'epoch': 1.59}
+{'loss': 4.9117, 'grad_norm': 0.0, 'learning_rate': 0.007361629153269025, 'epoch': 1.6}
+{'loss': 5.3803, 'grad_norm': 0.0, 'learning_rate': 0.007357341907824223, 'epoch': 1.61}
+{'loss': 4.9978, 'grad_norm': 0.0, 'learning_rate': 0.007353054662379421, 'epoch': 1.62}
+{'loss': 5.547, 'grad_norm': 0.0, 'learning_rate': 0.00734876741693462, 'epoch': 1.63}
+{'loss': 4.6334, 'grad_norm': 0.0, 'learning_rate': 0.007344480171489818, 'epoch': 1.64}
+                                                                                                                                                                      
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.25      0.98      0.40      1082
+     Class 1       0.00      0.00      0.00      1040
+     Class 2       0.31      0.01      0.02      2122
+
+    accuracy                           0.25      4244
+   macro avg       0.19      0.33      0.14      4244
+weighted avg       0.22      0.25      0.11      4244
+
+{'eval_loss': 2.5535788536071777, 'eval_accuracy': 0.25494816211121585, 'eval_f1': 0.11083651542342815, 'eval_precision': 0.2222247367577165, 'eval_recall': 0.25494816211121585, 'eval_runtime': 21.8397, 'eval_samples_per_second': 194.325, 'eval_steps_per_second': 12.18, 'epoch': 1.65}
+Cannot access gated repo for url https://huggingface.co/meta-llama/llama-3.2-1B/resolve/main/config.json.
+Access to model meta-llama/Llama-3.2-1B is restricted. You must have access to it and be authenticated to access it. Please log in. - silently ignoring the lookup for the file config.json in meta-llama/llama-3.2-1B.
+  warnings.warn(
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in meta-llama/llama-3.2-1B - will assume that the vocabulary was not modified.
+  warnings.warn(
+  8%|██████████                                                                                                                | 1536/18660 [15:44<2:55:25,  1.63it/s]
+{'train_runtime': 947.8881, 'train_samples_per_second': 629.948, 'train_steps_per_second': 19.686, 'train_loss': 5.115453999489546, 'epoch': 1.65}
+Saving final model...
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/peft/utils/other.py:1228: UserWarning: Unable to fetch remote file due to the following error 401 Client Error. (Request ID: Root=1-68c20e36-782b0a5b0d952c2d29aa756a;2fb4edac-e2b0-4f50-9d76-21f743440925)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/llama-3.2-1B/resolve/main/config.json.
+Access to model meta-llama/Llama-3.2-1B is restricted. You must have access to it and be authenticated to access it. Please log in. - silently ignoring the lookup for the file config.json in meta-llama/llama-3.2-1B.
+  warnings.warn(
+/home/UNT/av0967/.pyenv/versions/3.13.0/lib/python3.13/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in meta-llama/llama-3.2-1B - will assume that the vocabulary was not modified.
+  warnings.warn(
+Evaluating...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 266/266 [00:21<00:00, 12.26it/s]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.25      0.98      0.40      1082
+     Class 1       0.00      0.00      0.00      1040
+     Class 2       0.31      0.01      0.02      2122
+
+    accuracy                           0.25      4244
+   macro avg       0.19      0.33      0.14      4244
+weighted avg       0.22      0.25      0.11      4244
+
+Final results: {'eval_loss': 2.5535788536071777, 'eval_accuracy': 0.25494816211121585, 'eval_f1': 0.11083651542342815, 'eval_precision': 0.2222247367577165, 'eval_recall': 0.25494816211121585, 'eval_runtime': 21.8085, 'eval_samples_per_second': 194.603, 'eval_steps_per_second': 12.197, 'epoch': 1.6463022508038585}

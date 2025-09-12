@@ -1,0 +1,40 @@
+{
+  "os": "Linux-6.8.0-47-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.13.0",
+  "startedAt": "2025-09-10T23:32:21.411651Z",
+  "program": "/home/UNT/av0967/models/llama-finetune/main.py",
+  "codePath": "main.py",
+  "codePathLocal": "main.py",
+  "git": {
+    "remote": "https://github.com/namesarnav/llama-finetune.git",
+    "commit": "d49bb1dd7efaa4c34c286f7e5367878c3df6a860"
+  },
+  "email": "namesarnav@icloud.com",
+  "root": "/home/UNT/av0967/models/llama-finetune",
+  "host": "ceng-l-1mv3664",
+  "executable": "/home/UNT/av0967/.pyenv/versions/3.13.0/bin/python3",
+  "cpu_count": 24,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1006460407808",
+      "used": "667381473280"
+    }
+  },
+  "memory": {
+    "total": "33322545152"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA RTX 2000 Ada Generation",
+      "memoryTotal": "17175674880",
+      "cudaCores": 2816,
+      "architecture": "Ada",
+      "uuid": "GPU-3876ded7-9ab6-c559-d483-7a6aecf222a3"
+    }
+  ],
+  "cudaVersion": "12.7",
+  "writerId": "zx0uk7eti1fdcuzld87407uldlnakdzg"
+}
