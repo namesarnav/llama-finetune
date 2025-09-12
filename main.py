@@ -47,7 +47,7 @@ def main():
         logging_steps=10,
         save_steps=512,
         save_total_limit=3,
-        num_train_epochs=50,
+        num_train_epochs=5,
         per_device_train_batch_size=64,
         per_device_eval_batch_size=32,
         gradient_accumulation_steps=2,
@@ -77,7 +77,7 @@ def main():
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=5, early_stopping_threshold=0.01)]
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=3, early_stopping_threshold=0.01)]
     )
 
     print("Starting training...")
