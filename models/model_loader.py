@@ -1,7 +1,7 @@
 import torch
 from transformers import BitsAndBytesConfig, LlamaTokenizer, AutoTokenizer
 from transformers import AutoModelForSequenceClassification
-from utils import set_device
+from utils import get_device
 
 def load_model(model_id: str, hf_token: str, num_labels: int = 3):
     bnb_config = BitsAndBytesConfig(
@@ -13,7 +13,7 @@ def load_model(model_id: str, hf_token: str, num_labels: int = 3):
     )
 
 
-    if set_device() == "cuda":
+    if get_device.set_device() == "cuda":
         model = AutoModelForSequenceClassification.from_pretrained(
             model_id,
             quantization_config=bnb_config,
@@ -23,7 +23,7 @@ def load_model(model_id: str, hf_token: str, num_labels: int = 3):
         )
         return model
 
-    elif set_device() == "mps":
+    elif get_device.set_device() == "mps":
 
         model = AutoModelForSequenceClassification.from_pretrained(
             model_id,
