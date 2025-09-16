@@ -6,11 +6,11 @@ from config import (
     FINAL_MODEL_DIR
 )
 
+import torch 
 from models.model_loader import load_model, load_tokenizer
 from models.peft_setup import get_lora_model
 from data.dataset_loader import preprocess_data
 from utils.metrics import compute_metrics
-
 from transformers import (
     TrainingArguments,
     DataCollatorWithPadding,
@@ -19,19 +19,39 @@ from transformers import (
 )
 
 
-def main():
-    print("Loading tokenizer...")
+def set_device(): 
 
+    device = "cpu" # defaults to cpu device
+    
+    if torch.backends.mps.is_available():
+        print("Model running on Apple Silicon, MPS is available\nSelecting MPS as default device")
+        device = torch.device("mps")
+        return device
+
+    elif torch.cuda.is_available(): 
+        print("CUDA Device found, Defaulting to CUDA")
+        device = torch.device("cuda")
+        return device
+
+    else: 
+        print("No accelarator device found, Defaulting to CPU")
+        return device
+
+
+gpu_device = set_device()
+
+def main():
+    #-----
+    print("Loading tokenizer...")
     tokenizer = load_tokenizer(MODEL_ID, HF_TOKEN)
 
+    #-----
     print("Preprocessing dataset...")
-
     tk_data_train, tk_data_test, label_encoder = preprocess_data(tokenizer, TRAIN_FILE, TEST_FILE)
-
     num_labels = len(label_encoder.classes_)
 
+    #-----
     print("Loading model...")
-
     model = load_model(MODEL_ID, HF_TOKEN, num_labels=num_labels)
 
     if getattr(model.config, "vocab_size", None) and len(tokenizer) != model.config.vocab_size:
@@ -39,11 +59,13 @@ def main():
 
     model.config.pad_token_id = tokenizer.pad_token_id
 
+    #-----
     print("Preparing LoRA model...")
-    
     model = get_lora_model(model)
-
     model.print_trainable_parameters()
+
+    model.to(gpu_device)
+    model.train()
 
     training_args = TrainingArguments(
         output_dir="./results",
@@ -52,7 +74,7 @@ def main():
         save_steps=512,
         save_total_limit=3,
         num_train_epochs=5,
-        per_device_train_batch_size=64,
+        per_device_train_batch_size=32,
         per_device_eval_batch_size=32,
         gradient_accumulation_steps=2,
         learning_rate=3e-5,

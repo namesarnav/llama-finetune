@@ -7,8 +7,8 @@ def get_lora_model(model):
     model = prepare_model_for_kbit_training(model)
 
     peft_config = LoraConfig(
-        r=16,
-        lora_alpha=64,
+        r=32,
+        lora_alpha=128,
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
         lora_dropout=0.02,
         bias="none",
