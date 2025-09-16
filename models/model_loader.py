@@ -1,7 +1,7 @@
 import torch
 from transformers import BitsAndBytesConfig, LlamaTokenizer, AutoTokenizer
 from transformers import AutoModelForSequenceClassification
-
+from utils import set_device
 
 def load_model(model_id: str, hf_token: str, num_labels: int = 3):
     bnb_config = BitsAndBytesConfig(
@@ -12,14 +12,30 @@ def load_model(model_id: str, hf_token: str, num_labels: int = 3):
         bnb_8bit_compute_dtype=torch.float16,
     )
 
-    model = AutoModelForSequenceClassification.from_pretrained(
-        model_id,
-        quantization_config=bnb_config,
-        device_map="auto",
-        token=hf_token,
-        num_labels=num_labels,
-    )
-    return model
+
+    if set_device() == "cuda":
+        model = AutoModelForSequenceClassification.from_pretrained(
+            model_id,
+            quantization_config=bnb_config,
+            device_map="auto",
+            token=hf_token,
+            num_labels=num_labels,
+        )
+        return model
+
+    elif set_device() == "mps":
+
+        model = AutoModelForSequenceClassification.from_pretrained(
+            model_id,
+            torch_dtype = torch.float16,
+            device_map="auto",
+            token=hf_token,
+            num_labels=num_labels,
+        )
+        return model
+    
+    else: 
+        raise("DeviceError: Quantization configs not set because accelerator not found. Running on CPU is not feasible")
 
 
 def load_tokenizer(model_id: str, hf_token: str):

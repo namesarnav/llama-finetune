@@ -38,8 +38,6 @@ def set_device():
         return device
 
 
-gpu_device = set_device()
-
 def main():
     #-----
     print("Loading tokenizer...")
@@ -63,6 +61,7 @@ def main():
     print("Preparing LoRA model...")
     model = get_lora_model(model)
     model.print_trainable_parameters()
+
 
     model.to(gpu_device)
     model.train()
