@@ -24,7 +24,6 @@ def preprocess_data(tokenizer, train_file="train.csv", test_file="test.csv"):
     def tokenize(x):
         return tokenizer(x["text"], padding=True, truncation=True, max_length=512)
 
-    tokenizer.pad_token = tokenizer.eos_token
     tk_data_train = dataset['train'].map(tokenize, batched=False)
     tk_data_test = dataset['test'].map(tokenize, batched=False)
 

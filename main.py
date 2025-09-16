@@ -20,27 +20,30 @@ from transformers import (
 
 
 def main():
-    print("Loading model + tokenizer...")
-    
-    model = load_model(MODEL_ID, HF_TOKEN)
+    print("Loading tokenizer...")
 
     tokenizer = load_tokenizer(MODEL_ID, HF_TOKEN)
-    
-    if getattr(model.config, "vocab_size", None) and len(tokenizer) != model.config.vocab_size:
-        model.resize_token_embeddings(len(tokenizer))
-    
-    model.config.pad_token_id = tokenizer.pad_token_id # you need this because the error is not with the tokenizer, but with the model itself
-    
+
     print("Preprocessing dataset...")
 
-    tk_data_train, tk_data_test, _ = preprocess_data(tokenizer, TRAIN_FILE, TEST_FILE)
+    tk_data_train, tk_data_test, label_encoder = preprocess_data(tokenizer, TRAIN_FILE, TEST_FILE)
 
-    # resize embeddings
-    model.resize_token_embeddings(len(tokenizer))
+    num_labels = len(label_encoder.classes_)
+
+    print("Loading model...")
+
+    model = load_model(MODEL_ID, HF_TOKEN, num_labels=num_labels)
+
+    if getattr(model.config, "vocab_size", None) and len(tokenizer) != model.config.vocab_size:
+        model.resize_token_embeddings(len(tokenizer))
+
+    model.config.pad_token_id = tokenizer.pad_token_id
 
     print("Preparing LoRA model...")
     
     model = get_lora_model(model)
+
+    model.print_trainable_parameters()
 
     training_args = TrainingArguments(
         output_dir="./results",
